@@ -1,0 +1,45 @@
+@media (max-width: 1340px){
+    #product{
+        float: left;
+        margin: 5px;
+    }
+    .product{
+        float: left;
+        margin:5px;
+        padding: 10px;
+        text-align: center;
+        background-color: white;
+        height: 320px;
+        width: 325px;
+    }
+    .product>img{
+        width: 300px;
+        height: 168px;
+    }
+    #price{
+        float: left;
+        background-color: yellowgreen;
+        text-align: left;
+        color: white;
+        font-size: 23px;
+    }
+    #title{
+        margin: 5px;
+    }
+    #addtocart{
+        float: left;
+        background-color: green;
+        color: white;
+        font-style: initial;
+        width: 42%;
+        padding: 10px;
+    }
+    #detail{
+        float: left;
+        background-color: rgb(238, 238, 238);
+        color: black;
+        font-style: initial;
+        width: 42%;
+        padding: 10px;
+    }
+}
