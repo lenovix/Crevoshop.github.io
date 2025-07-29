@@ -1,117 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crevo Shop</title>
     <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/style-new.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#9ACD32',
+                        secondary: '#32CD32'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-        <div class="header">
-            <a href="underconstruct.html">
-                <img id="logo" src="img/Logocrevo.png" title="Crevo Shop">
-            </a>
-            <input id="searchbar" type="text" placeholder="Search">
-            <button type="button" id="button">Search</button>
-            <a class="link-menu first" href="underconstruct.html" title="Hot Promo">Hot Promo</a>
-            <a class="link-menu" href="underconstruct.html" title="Flash Sale">Flash Sale</a>
-            <a class="link-menu" href="underconstruct.html" title="Popular">Popular</a>
-            <a class="link-menu" href="underconstruct.html" title="Discount">Discount</a>
-            
-            <a href="underconstruct.html"><img id="img-icon1" src="img/m-01.png" title="Cart"></a>
-                <a href="underconstruct.html"><img id="img-icon2" src="img/s-02.png" title="Message"></a>
-                <a href="underconstruct.html"><img id="img-icon3" src="img/s-01.png" title="Account"></a>
-            
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg border-b-2 border-primary sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="underconstruct.html">
+                        <img src="img/Logocrevo.png" alt="Crevo Shop" class="h-12 w-auto">
+                    </a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-2xl mx-8">
+                    <div class="relative">
+                        <input type="text" placeholder="Search products..."
+                            class="w-full px-6 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-700">
+                        <button
+                            class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition-all duration-300 font-medium">
+                            Search
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="underconstruct.html"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium text-sm uppercase tracking-wide">Hot
+                        Promo</a>
+                    <a href="underconstruct.html"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium text-sm uppercase tracking-wide">Flash
+                        Sale</a>
+                    <a href="underconstruct.html"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium text-sm uppercase tracking-wide">Popular</a>
+                    <a href="underconstruct.html"
+                        class="text-gray-700 hover:text-primary transition-colors font-medium text-sm uppercase tracking-wide">Discount</a>
+                </nav>
+
+                <!-- Icons -->
+                <div class="flex items-center space-x-3">
+                    <a href="underconstruct.html" class="p-3 hover:bg-gray-100 rounded-full transition-colors relative">
+                        <img src="img/m-01.png" alt="Cart" class="h-6 w-6">
+                        <span
+                            class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </a>
+                    <a href="underconstruct.html" class="p-3 hover:bg-gray-100 rounded-full transition-colors">
+                        <img src="img/s-02.png" alt="Message" class="h-6 w-6">
+                    </a>
+                    <a href="underconstruct.html" class="p-3 hover:bg-gray-100 rounded-full transition-colors">
+                        <img src="img/s-01.png" alt="Account" class="h-6 w-6">
+                    </a>
+                </div>
+            </div>
         </div>
-        <div id="welcome"></div>
-    <div id="category">
-        <a href="underconstruct.html"><div class="categories1">All</div></a>
-        <a href="underconstruct.html"><div class="categories">Bag Watch & Accessories</div></a>
-        <a href="underconstruct.html"><div class="categories">Beauty & Health</div></a>
-        <a href="underconstruct.html"><div class="categories">Electronic & Accessories</div></a>
-        <a href="underconstruct.html"><div class="categories">Fashion Women</div></a>
-        <a href="underconstruct.html"><div class="categories">Fashion Men</div></a>
-        <a href="underconstruct.html"><div class="categories">Food</div></a>
-        <a href="underconstruct.html"><div class="categories">Home improvement</div></a>
-        <a href="underconstruct.html"><div class="categories">Kids</div></a>
-        <a href="underconstruct.html"><div class="categories">Sport</div></a>
-    </div>
-    <div id="product">
-        <div class="product">
-            <p id="price">$<b>3149</b></p>
-            <img src="img/prd/survace.jpg">
-            <p id="title">Microsoft Surface Pro 7 12.3-inch i7/16GB/512GB SSD 2 in 1 Device - Platinum</p>
-            <a href="underconstruct.html"><div id="addtocart"><strong>Add To Cart</strong></div></a>
-            <a href="underconstruct.html"><div id="detail"><strong>Detail</strong></div></a>
-        </div>
-        <div class="product">
-            <p id="price">$<b>1698</b></p>
-            <img src="img/prd/prd2.jpg">
-            <p id="title">Microsoft Surface Book 2 15-inch i7/16GB/1TB SSD 2 in 1 Device</p>
-            <a href="underconstruct.html"><div id="addtocart"><strong>Add To Cart</strong></div></a>
-            <a href="underconstruct.html"><div id="detail"><strong>Detail</strong></div></a>
-        </div>
-        <div class="product">
-            <p id="price">$<b>539</b></p>
-            <img src="img/prd/prd3.jpg">
-            <p id="title">Netgear Nighthawk SX10 Pro Gaming 8-Port Ethernet Switch</p>
-            <a href="underconstruct.html"><div id="addtocart"><strong>Add To Cart</strong></div></a>
-            <a href="underconstruct.html"><div id="detail"><strong>Detail</strong></div></a>
-        </div>
-        <br>
-        <div class="product">
-            <p id="price">$<b>768</b></p>
-            <img src="img/prd/prd3.jpg">
-            <p id="title">Netgear Nighthawk SX10 Pro Gaming 8-Port Ethernet Switch</p>
-            <a href="underconstruct.html"><div id="addtocart"><strong>Add To Cart</strong></div></a>
-            <a href="underconstruct.html"><div id="detail"><strong>Detail</strong></div></a>
-        </div>
-        <div class="product">
-            <p id="price">$<b>323</b></p>
-            <img src="img/prd/prd3.jpg">
-            <p id="title">Netgear Nighthawk SX10 Pro Gaming 8-Port Ethernet Switch</p>
-            <a href="underconstruct.html"><div id="addtocart"><strong>Add To Cart</strong></div></a>
-            <a href="underconstruct.html"><div id="detail"><strong>Detail</strong></div></a>
-        </div>
-        <div class="product">
-            <p id="price">$<b>544</b></p>
-            <img src="img/prd/prd3.jpg">
-            <p id="title">Netgear Nighthawk SX10 Pro Gaming 8-Port Ethernet Switch</p>
-            <a href="underconstruct.html"><div id="addtocart"><strong>Add To Cart</strong></div></a>
-            <a href="underconstruct.html"><div id="detail"><strong>Detail</strong></div></a>
-        </div>
-        <br>
-        <div class="product">
-            <p id="price">$<b>112</b></p>
-            <img src="img/prd/prd3.jpg">
-            <p id="title">Netgear Nighthawk SX10 Pro Gaming 8-Port Ethernet Switch</p>
-            <a href="underconstruct.html"><div id="addtocart"><strong>Add To Cart</strong></div></a>
-            <a href="underconstruct.html"><div id="detail"><strong>Detail</strong></div></a>
-        </div>
-        <div class="product">
-            <p id="price">$<b>123</b></p>
-            <img src="img/prd/prd3.jpg">
-            <p id="title">Netgear Nighthawk SX10 Pro Gaming 8-Port Ethernet Switch</p>
-            <a href="underconstruct.html"><div id="addtocart"><strong>Add To Cart</strong></div></a>
-            <a href="underconstruct.html"><div id="detail"><strong>Detail</strong></div></a>
-        </div>
-        <div class="product">
-            <p id="price">$<b>65</b></p>
-            <img src="img/prd/prd3.jpg">
-            <p id="title">Netgear Nighthawk SX10 Pro Gaming 8-Port Ethernet Switch</p>
-            <a href="underconstruct.html"><div id="addtocart"><strong>Add To Cart</strong></div></a>
-            <a href="underconstruct.html"><div id="detail"><strong>Detail</strong></div></a>
+    </header>
+
+
+    <!-- Welcome Banner -->
+    <div class="bg-gradient-to-r from-primary to-secondary text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-2">Welcome to Crevo Shop</h1>
+            <p class="text-xl opacity-90">Discover amazing products at unbeatable prices</p>
         </div>
     </div>
-    <footer>
-        <img id="gototop" src="img/gototop.png" onclick="scrollWin()" title="Go Up">
-        <div id="p1">
-            Copyright © 2020-<span id="copyright">…</span> by Andrian, Kamil
+
+
+    <!-- Categories -->
+    <section class="bg-white py-8 shadow-sm">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Shop by Category</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="underconstruct.html"
+                    class="bg-primary text-white px-6 py-3 rounded-full hover:bg-secondary transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">All</a>
+                <a href="underconstruct.html"
+                    class="bg-gray-200 text-gray-700 px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">Bag
+                    Watch & Accessories</a>
+                <a href="underconstruct.html"
+                    class="bg-gray-200 text-gray-700 px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">Beauty
+                    & Health</a>
+                <a href="underconstruct.html"
+                    class="bg-gray-200 text-gray-700 px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">Electronic
+                    & Accessories</a>
+                <a href="underconstruct.html"
+                    class="bg-gray-200 text-gray-700 px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">Fashion
+                    Women</a>
+                <a href="underconstruct.html"
+                    class="bg-gray-200 text-gray-700 px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">Fashion
+                    Men</a>
+                <a href="underconstruct.html"
+                    class="bg-gray-200 text-gray-700 px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">Food</a>
+                <a href="underconstruct.html"
+                    class="bg-gray-200 text-gray-700 px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">Home
+                    Improvement</a>
+                <a href="underconstruct.html"
+                    class="bg-gray-200 text-gray-700 px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">Kids</a>
+                <a href="underconstruct.html"
+                    class="bg-gray-200 text-gray-700 px-6 py-3 rounded-full hover:bg-primary hover:text-white transition-all duration-300 font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1">Sport</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Text -->
+    <p id="welcomeMessage" class="text-center text-primary text-lg font-medium mt-4 hidden"></p>
+    
+    <!-- Products Grid -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Featured Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+                <!-- Product Card 1 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative">
+                        <img src="img/prd/survace.jpg" alt="Microsoft Surface Pro 7" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            Hot</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl font-bold text-primary">$3149</span>
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <h3 class="text-gray-800 font-semibold mb-3 line-clamp-2">Microsoft Surface Pro 7 12.3-inch
+                            i7/16GB/512GB SSD 2 in 1 Device - Platinum</h3>
+                        <div class="flex gap-2">
+                            <a href="underconstruct.html"
+                                class="flex-1 bg-primary text-white py-3 px-4 rounded-lg hover:bg-secondary transition-colors font-medium text-center">Add
+                                to Cart</a>
+                            <a href="underconstruct.html"
+                                class="bg-gray-200 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors font-medium">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative">
+                        <img src="img/prd/prd2.jpg" alt="Microsoft Surface Book 2" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            New</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl font-bold text-primary">$1698</span>
+                            <div class="flex text-yellow-400">
+                                ★★★★☆
+                            </div>
+                        </div>
+                        <h3 class="text-gray-800 font-semibold mb-3 line-clamp-2">Microsoft Surface Book 2 15-inch
+                            i7/16GB/1TB SSD 2 in 1 Device</h3>
+                        <div class="flex gap-2">
+                            <a href="underconstruct.html"
+                                class="flex-1 bg-primary text-white py-3 px-4 rounded-lg hover:bg-secondary transition-colors font-medium text-center">Add
+                                to Cart</a>
+                            <a href="underconstruct.html"
+                                class="bg-gray-200 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors font-medium">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative">
+                        <img src="img/prd/prd3.jpg" alt="Netgear Nighthawk" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            Sale</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl font-bold text-primary">$539</span>
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <h3 class="text-gray-800 font-semibold mb-3 line-clamp-2">Netgear Nighthawk SX10 Pro Gaming
+                            8-Port Ethernet Switch</h3>
+                        <div class="flex gap-2">
+                            <a href="underconstruct.html"
+                                class="flex-1 bg-primary text-white py-3 px-4 rounded-lg hover:bg-secondary transition-colors font-medium text-center">Add
+                                to Cart</a>
+                            <a href="underconstruct.html"
+                                class="bg-gray-200 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors font-medium">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative">
+                        <img src="img/prd/prd3.jpg" alt="Netgear Nighthawk" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl font-bold text-primary">$768</span>
+                            <div class="flex text-yellow-400">
+                                ★★★★☆
+                            </div>
+                        </div>
+                        <h3 class="text-gray-800 font-semibold mb-3 line-clamp-2">Netgear Nighthawk SX10 Pro Gaming
+                            8-Port Ethernet Switch</h3>
+                        <div class="flex gap-2">
+                            <a href="underconstruct.html"
+                                class="flex-1 bg-primary text-white py-3 px-4 rounded-lg hover:bg-secondary transition-colors font-medium text-center">Add
+                                to Cart</a>
+                            <a href="underconstruct.html"
+                                class="bg-gray-200 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors font-medium">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative">
+                        <img src="img/prd/prd3.jpg" alt="Netgear Nighthawk" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl font-bold text-primary">$323</span>
+                            <div class="flex text-yellow-400">
+                                ★★★☆☆
+                            </div>
+                        </div>
+                        <h3 class="text-gray-800 font-semibold mb-3 line-clamp-2">Netgear Nighthawk SX10 Pro Gaming
+                            8-Port Ethernet Switch</h3>
+                        <div class="flex gap-2">
+                            <a href="underconstruct.html"
+                                class="flex-1 bg-primary text-white py-3 px-4 rounded-lg hover:bg-secondary transition-colors font-medium text-center">Add
+                                to Cart</a>
+                            <a href="underconstruct.html"
+                                class="bg-gray-200 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors font-medium">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative">
+                        <img src="img/prd/prd3.jpg" alt="Netgear Nighthawk" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl font-bold text-primary">$544</span>
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <h3 class="text-gray-800 font-semibold mb-3 line-clamp-2">Netgear Nighthawk SX10 Pro Gaming
+                            8-Port Ethernet Switch</h3>
+                        <div class="flex gap-2">
+                            <a href="underconstruct.html"
+                                class="flex-1 bg-primary text-white py-3 px-4 rounded-lg hover:bg-secondary transition-colors font-medium text-center">Add
+                                to Cart</a>
+                            <a href="underconstruct.html"
+                                class="bg-gray-200 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors font-medium">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 7 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative">
+                        <img src="img/prd/prd3.jpg" alt="Netgear Nighthawk" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl font-bold text-primary">$112</span>
+                            <div class="flex text-yellow-400">
+                                ★★★★☆
+                            </div>
+                        </div>
+                        <h3 class="text-gray-800 font-semibold mb-3 line-clamp-2">Netgear Nighthawk SX10 Pro Gaming
+                            8-Port Ethernet Switch</h3>
+                        <div class="flex gap-2">
+                            <a href="underconstruct.html"
+                                class="flex-1 bg-primary text-white py-3 px-4 rounded-lg hover:bg-secondary transition-colors font-medium text-center">Add
+                                to Cart</a>
+                            <a href="underconstruct.html"
+                                class="bg-gray-200 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors font-medium">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 8 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="relative">
+                        <img src="img/prd/prd3.jpg" alt="Netgear Nighthawk" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl font-bold text-primary">$123</span>
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <h3 class="text-gray-800 font-semibold mb-3 line-clamp-2">Netgear Nighthawk SX10 Pro Gaming
+                            8-Port Ethernet Switch</h3>
+                        <div class="flex gap-2">
+                            <a href="underconstruct.html"
+                                class="flex-1 bg-primary text-white py-3 px-4 rounded-lg hover:bg-secondary transition-colors font-medium text-center">Add
+                                to Cart</a>
+                            <a href="underconstruct.html"
+                                class="bg-gray-200 text-gray-700 py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors font-medium">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Crevo Shop</h3>
+                    <p class="text-gray-400">Your trusted online shopping destination for quality products at great
+                        prices.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="underconstruct.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="underconstruct.html" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="underconstruct.html" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="underconstruct.html" class="hover:text-white transition-colors">Shipping</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="underconstruct.html" class="hover:text-white transition-colors">Electronics</a>
+                        </li>
+                        <li><a href="underconstruct.html" class="hover:text-white transition-colors">Fashion</a></li>
+                        <li><a href="underconstruct.html" class="hover:text-white transition-colors">Home & Garden</a>
+                        </li>
+                        <li><a href="underconstruct.html" class="hover:text-white transition-colors">Sports</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>Copyright © 2020-<span id="copyright">2024</span> by Andrian, Kamil</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Go to Top Button -->
+    <button onclick="scrollWin()"
+        class="fixed bottom-8 right-8 bg-primary hover:bg-secondary text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 z-40">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- Welcome Modal -->
+    <div id="welcomeModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-sm text-center">
+            <h2 class="text-xl font-semibold mb-4">Welcome to Crevo Shop!</h2>
+            <p class="mb-4">Please enter your name to continue:</p>
+            <input type="text" id="usernameInput" placeholder="Your name..."
+                class="w-full border border-gray-300 rounded px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-primary" />
+            <button onclick="submitName()"
+                class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded transition-all">
+                Continue
+            </button>
+        </div>
+    </div>
+
     <!-- Script -->
     <script src="js/allinhere.js"></script>
+    <script>
+        // Modal welcome
+        window.onload = () => {
+            const modal = document.getElementById("welcomeModal");
+            const welcomeText = document.getElementById("welcomeMessage");
+            const savedName = localStorage.getItem("username");
+
+            if (savedName) {
+                welcomeText.textContent = `Hi ${savedName}! Enjoy your shopping!`;
+                welcomeText.classList.remove("hidden");
+                modal.classList.add("hidden");
+            } else {
+                modal.classList.remove("hidden");
+            }
+
+            // Set tahun copyright
+            document.getElementById('copyright').textContent = new Date().getFullYear();
+        };
+
+        function submitName() {
+            const input = document.getElementById("usernameInput");
+            const name = input.value.trim();
+            const modal = document.getElementById("welcomeModal");
+            const welcomeText = document.getElementById("welcomeMessage");
+
+            if (name) {
+                localStorage.setItem("username", name);
+                welcomeText.textContent = `Hi ${name}! Enjoy your shopping!`;
+            } else {
+                welcomeText.textContent = "Who are you?! But enjoy your shopping!";
+            }
+
+            modal.classList.add("hidden");
+            welcomeText.classList.remove("hidden");
+        }
+
+        function scrollWin() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
+
 </html>
